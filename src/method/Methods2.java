@@ -8,7 +8,7 @@ public class Methods2 {
 	}
 	
 	public static void main(String[] args) {
-		add(1, 0);
+		Methods2.add(1, 0);
 		int a = 1;
 		add(a, 3);
 		int b = 10;
