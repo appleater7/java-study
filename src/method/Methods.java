@@ -23,6 +23,5 @@ public class Methods {
 		setStr("abc");
 		String str = getStr();
 		System.out.println(str);
-		
 	}
 }
