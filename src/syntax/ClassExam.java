@@ -5,7 +5,7 @@ public class ClassExam {
 	char c = '1';
 	String s = "1";
 	
-	static public void test() {
+	void test() {
 		int abc = 0;
 		System.out.println("난 ClassExam꺼");
 	}
