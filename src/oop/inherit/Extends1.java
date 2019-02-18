@@ -4,11 +4,11 @@ package oop.inherit;
  *  마더의 데이터를 읽은후, Extends1 의 데이터를 마저 읽는다.
  *  이후 실행 한다. 
  */
-class Mother {
+class Mother1 {
 	int age = 55;
 	String name = "엄마몬!";
 	
-	Mother() {
+	Mother1() {
 		System.out.println("난 엄마 생성자");
 	}
 	
@@ -21,7 +21,7 @@ class Mother {
 	}
 }
 
-public class Extends1 extends Mother {
+public class Extends1 extends Mother1 {
 	
 	Extends1() {
 		System.out.println("난 확장 생성자!");
