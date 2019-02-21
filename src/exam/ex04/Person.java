@@ -17,4 +17,8 @@ public class Person implements Action{
 		System.out.println("먹다");
 	}
 
+	@Override
+	public void eat(String str) {
+		System.out.println("먹다");
+	}
 }

@@ -16,5 +16,10 @@ public class Cat implements Action{
 	public void eat() {
 		System.out.println("냥먹냥먹");
 	}
+	
+	@Override
+	public void eat(String str) {
+		System.out.println("냥이" + str + "먹습니다.");
+	}
 
 }

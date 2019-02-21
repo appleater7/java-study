@@ -8,4 +8,5 @@ public interface Action {
 	public void speek();
 	public void sleep();
 	public void eat();
+	public void eat(String str);
 }
