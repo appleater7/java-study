@@ -23,6 +23,10 @@ class GrandFather {
 	
 	int age = 70;
 	
+	GrandFather() {
+		
+	}
+	
 	void work() {
 		System.out.println("할아버지가 농사를 짓는다.");
 		System.out.println(this.age);
@@ -34,6 +38,10 @@ class Father extends GrandFather {
 	
 	int age = 40;
 	
+	Father() {
+		
+	}
+	
 	void work() {
 		super.work();
 		System.out.println("아빠가 일함");
@@ -44,6 +52,10 @@ class Father extends GrandFather {
 public class Son extends Father{
 	
 	int age = 10;
+	
+	Son() {
+		System.out.println("이건 생성자");
+	}
 	
 	void work() {
 		super.work();
