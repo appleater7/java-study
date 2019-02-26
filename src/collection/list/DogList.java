@@ -27,6 +27,9 @@ class Dog {
 	public int getAge() {
 		return this.age;
 	}
+	public String toString() {
+		return "Dog [name = " + this.name + ", age = " + age + "]";
+	}
 }
 
 public class DogList {
