@@ -11,8 +11,9 @@ public class BoardService {
 		try {
 			PreparedStatement	ps = DBCon.getCon().prepareStatement(sql);
 			ResultSet		 	rs = ps.executeQuery();
-			System.out.println("제목");
+			System.out.println("글번호 / 제목");
 			while(rs.next()) {
+				System.out.print(rs.getString("bi_num") + "      ");
 				System.out.println(rs.getString("bi_title"));
 			}
 			System.out.println("조회가 완료되었습니다.");
@@ -27,7 +28,7 @@ public class BoardService {
 		String sql = "insert into board_info(bi_num, bi_title, bi_content,"
 				+ " bi_credat, bi_cretim) ";
 		sql += "values(seq_bi_num.nextval, ?, ?, to_char(sysdate, 'yyyymmdd'), "
-				+ "to_char(sysdate, 'hh24miss)";
+				+ "to_char(sysdate, 'hh24miss'))";
 		try {
 			PreparedStatement ps = DBCon.getCon().prepareStatement(sql);
 			ps.setString(1, title);
@@ -43,7 +44,7 @@ public class BoardService {
 		}
 	}
 	
-	public void updateBoard(int inNum, String inTitle, String inConnent) {
+	public void updateBoard(String inNum, String inTitle, String inConnent) {
 		String sql = "update board_info set bi_title = ?, bi_content = ? "
 				+ "where bi_num = ?";
 		
@@ -51,7 +52,7 @@ public class BoardService {
 			PreparedStatement ps = DBCon.getCon().prepareStatement(sql);
 			ps.setString(1, inTitle);
 			ps.setString(2, inConnent);
-			ps.setInt(3, inNum);
+			ps.setString(3, inNum);
 			int cnt = ps.executeUpdate();
 			if (cnt == 1) {
 				System.out.println("게시물등록 완료");

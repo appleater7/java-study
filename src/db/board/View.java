@@ -47,12 +47,12 @@ public class View {
 							int deNum = scan.nextInt(); 
 							bs.deleteBoard(deNum);
 						}else if("4".equals(cmd)) {
-							System.out.println("수정할 글번호 : ");
-							int inNum = scan.nextInt();
-							System.out.println("수정할 제목 : ");
-							String inTitle = scan.next(); 
-							System.out.println("수정할 내용 : ");
-							String inContent = scan.next(); 
+							System.out.print("수정할 글번호 : ");
+							String inNum = scan.nextLine();
+							System.out.print("수정할 제목 : ");
+							String inTitle = scan.nextLine(); 
+							System.out.print("수정할 내용 : ");
+							String inContent = scan.nextLine(); 
 							bs.updateBoard(inNum, inTitle, inContent);
 						}
 					}
