@@ -1,7 +1,9 @@
 package me;
 
-public class Test22 {
-	public static void main(String[] args)	{
+public class CircleTest2 {
+	
+	public static void main(String[] args) {
+
 		int n = 10;
 		for (int i = -n; i <= n; i++) {
 			for (int j = -n; j <= n; j++) {
@@ -14,5 +16,4 @@ public class Test22 {
 			System.out.println();
 		}
 	}
-
 }
